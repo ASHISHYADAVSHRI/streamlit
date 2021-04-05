@@ -35,7 +35,7 @@ with d_set:
 	sl.header('NSE dataset ')
 	sl.text('This is the dataset i download it from NSE.com')
  
-	data = get_data("C:/streamlit/nsedata.csv")
+	data = get_data("C:/streamlit/pip/nsedata.csv")
 	sl.write(data)	
 	open_data = pd.DataFrame(data["Open"].value_counts()).head(50)
 	sl.bar_chart(open_data)

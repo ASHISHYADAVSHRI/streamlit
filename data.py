@@ -2,7 +2,7 @@ import streamlit as sl
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error , r2_score
-import scikit_learn
+import sklearn
 sl.markdown(
 	"""
 	<style>
@@ -35,7 +35,7 @@ with d_set:
 	sl.header('NSE dataset ')
 	sl.text('This is the dataset i download it from NSE.com')
  
-	data = get_data("C:/streamlit/pip/nsedata.csv")
+	data = get_data("pip/nsedata.csv")
 	sl.write(data)	
 	open_data = pd.DataFrame(data["Open"].value_counts()).head(50)
 	sl.bar_chart(open_data)
